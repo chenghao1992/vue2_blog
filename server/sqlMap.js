@@ -1,7 +1,7 @@
 // var getName = require('../src/js/getLoginName.js');
 // var name = getName.getName();
 // console.log('get' + name);
-var login_name = 'zygg'
+var login_name = 'test'
     // sql语句
 var sqlMap = {
     // 用户
