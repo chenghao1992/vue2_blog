@@ -34,7 +34,7 @@ compiler.plugin('compilation', function (compilation) {
     cb()
   })
 })
-
+//设置代理
 // proxy api requests
 Object.keys(proxyTable).forEach(function (context) {
   var options = proxyTable[context]

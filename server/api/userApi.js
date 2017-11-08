@@ -7,7 +7,7 @@ var $sql = require('../sqlMap');
 //使用连接池链接数据库
 
 var pool = mysql.createPool(models.mysql);
-
+// 把从数据库里查收的对象返回去直接用res.json(doc)
 var jsonWrite = function(res, ret) {
     if (typeof ret === 'undefined') {
         res.json({

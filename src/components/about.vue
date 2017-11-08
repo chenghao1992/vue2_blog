@@ -27,7 +27,9 @@
   import '../js/about.js'
   export default {
      mounted () {
+
       var aboutp =  this.$refs.aboutp;
+       console.log('aboutp',aboutp)
       return aboutp;
       }
     }

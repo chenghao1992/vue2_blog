@@ -6,6 +6,7 @@
           <div class='login-icon'><img src='../assets/img/user.png' class='pic-full'></div>
           <input type="text" placeholder="Username" required="required" ref='user' name="username" v-model="userName"
                  :value='user_name'><br>
+          <!--上面这种绑定值的写法有问题-->
           <div class='login-icon'><img src='../assets/img/pwd.png' class='pic-full'></div>
           <input type="password" placeholder="Password" required="required" ref='pwd' name="pwd" v-model="pwd"><br>
           <div class='two-btns'>
@@ -21,6 +22,7 @@
       <router-link to="/about"><span>關於我</span></router-link>
       |<span><router-link to="/diary/d_edit">發表動態</router-link></span>|<span><router-link to="/message_board/m_edit">給我留言🍀</router-link></span>
     </div>
+    <!--错误提示弹框-->
     <div :class="[classbg, classFade]" ref='bg'>
       <div class="modal" id="myModal" tabindex="2" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog">
@@ -93,6 +95,7 @@
               }
             }
             if (flag == 'allright') {
+//              unescape解密
               var cookie_name = unescape(setCookie.setInfo().name);
               if ((cookie_name != name && name != '' && cookie_name != '') || cookie_name == '') {
                 setCookie.getInfo(self.userName, self.pwd);
